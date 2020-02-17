@@ -1,4 +1,4 @@
-<h1 align="center">📖 Pioneer Bookstore App 📖</h1>
+<h1 align="center">📚 Pioneer Bookstore App 📚</h1>
 <p align="center">
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/kelvin8773/bookstore/blob/master/README.md" target="_blank">
@@ -16,7 +16,7 @@
 
 ### ✨ [Demo](https://pioneer-bookstore.herokuapp.com/)
 
-## Install
+## 🎬 Install
 
 ```sh
 yarn install
