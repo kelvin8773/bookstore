@@ -11,7 +11,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1 class="text-center">Starter Template</h1>
+        <h1 class="text-center">Book Store</h1>
       </div>
     );
   }
