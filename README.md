@@ -2,5 +2,5 @@
 
 > React-redux sample app
 
-[Demo Link](https://#)
+[Demo Link](https://pioneer-bookstore.herokuapp.com/)
 
