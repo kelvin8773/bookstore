@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import { removeBook } from '../actions';
 import Book from '../components/Book';
@@ -12,10 +13,10 @@ const BookList = ({ books }) => (
       <th>Category</th>
     </tr>
     {
-        books.map(book => (
-          <Book book={book} />
-        ))
-      }
+      books.map(book => (
+        <Book key={book.id} book={book} />
+      ))
+    }
   </table>
 );
 
@@ -26,5 +27,13 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   remove: book => dispatch(removeBook(book)),
 });
+
+BookList.propTypes = {
+  books: PropTypes.arrayOf,
+};
+
+BookList.defaultProps = {
+  books: [],
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(BookList);

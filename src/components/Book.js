@@ -17,5 +17,8 @@ Book.propTypes = {
   }),
 };
 
+Book.defaultProps = {
+  book: {},
+};
 
 export default Book;
