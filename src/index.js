@@ -13,30 +13,30 @@ const initialState = {
     {
       id: 1,
       title: 'Born to Run',
-      category: 'Learning'
+      category: 'Learning',
     },
     {
       id: 2,
       title: 'Steve Jobs',
-      category: 'Biography'
+      category: 'Biography',
     },
     {
       id: 3,
       title: 'Einstein: His Life and Universe',
-      category: 'Biography'
+      category: 'Biography',
     },
     {
       id: 4,
       title: 'The Histories',
-      category: 'History'
+      category: 'History',
     },
 
-  ]
-}
+  ],
+};
 
 ReactDOM.render(
   <Provider store={createStore(rootReducer, initialState)}>
     <App />
   </Provider>,
-  document.getElementById('root'));
-
+  document.getElementById('root'),
+);

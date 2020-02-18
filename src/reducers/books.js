@@ -5,10 +5,10 @@ const bookReducer = (state = [], action) => {
     case 'REMOVE_BOOK':
       return [
         ...state.slice(0, action.idx),
-        ...state.slice(action.idx + 1, state.length)]
+        ...state.slice(action.idx + 1, state.length)];
     default:
       return state;
   }
-}
+};
 
 export default bookReducer;
