@@ -1,0 +1,48 @@
+#app-content {
+  width: 80%;
+  margin: 5rem auto;
+  padding: 2rem;
+  -webkit-box-shadow: -2px -1px 12px -5px rgba(0, 0, 0, 0.65);
+  box-shadow: -2px -1px 12px -5px rgba(0, 0, 0, 0.65);
+
+  #app-title {
+    text-align: center;
+  }
+
+  #create-book-form {
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      margin: 1rem;
+    }
+
+    input,
+    select,
+    button {
+      padding: 0.5rem 2rem;
+      font-size: 1.3rem;
+    }
+  }
+
+  #book-list {
+    margin: 4rem auto;
+    border-collapse: collapse;
+    border: 1px solid black;
+
+    th,
+    td {
+      margin-bottom: 1rem;
+      padding: 1rem 2rem;
+      text-align: left;
+      border: 1px solid black;
+    }
+
+    th {
+      background-color: lightseagreen;
+    }
+  }
+
+}
