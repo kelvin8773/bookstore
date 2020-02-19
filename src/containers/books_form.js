@@ -2,9 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions';
-import { makeID } from '../helpers/index';
+import { makeID, CATEGORIES } from '../helpers/index';
 
-const CATEGORIES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
 class BookForm extends React.Component {
   constructor(props) {
@@ -66,7 +65,7 @@ class BookForm extends React.Component {
             type="submit"
             onClick={this.handleSubmit}
           >
-            Submit
+            Add Book
           </button>
         </span>
       </form>
