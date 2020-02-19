@@ -1,20 +1,15 @@
 import React from 'react';
 
-class App extends React.Component {
-  constructor(pros) {
-    super(pros);
-    this.state = {
+import BookList from '../containers/book_list';
+import BookForm from '../containers/books_form';
 
-    }
-  }
+const App = () => (
+  <div id="app-content">
+    <h1 id="app-title">Book Store</h1>
+    <BookForm />
+    <BookList />
+  </div>
+);
 
-  render() {
-    return (
-      <div>
-        <h1 class="text-center">Book Store</h1>
-      </div>
-    );
-  }
-}
 
 export default App;
