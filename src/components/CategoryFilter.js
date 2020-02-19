@@ -16,16 +16,15 @@ class CategoryFilter extends React.Component {
   render() {
     const CATEGORY_FILTER = ['All', ...CATEGORIES];
     return (
-      <div id="category-filter" >
-        <label id="category-filter-label" htmlFor="categoryFilter">Category</label>
+      <div id="category-filter">
+        <span id="category-filter-label">Category</span>
         <select
           id="category-filter-menu"
-          name="categoryFilter"
           onChange={this.handleChange}
         >
           {
             CATEGORY_FILTER.map(cat => (
-              <option key={'filter-' + cat} value={cat}>
+              <option key={`filter-${cat}`} value={cat}>
                 {cat}
               </option>
             ))
@@ -38,6 +37,6 @@ class CategoryFilter extends React.Component {
 
 CategoryFilter.propTypes = {
   handleChange: PropTypes.func.isRequired,
-}
+};
 
 export default CategoryFilter;
