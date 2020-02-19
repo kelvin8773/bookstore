@@ -22,9 +22,14 @@
     input,
     select,
     button {
-      padding: 0.5rem 2rem;
-      font-size: 1.3rem;
+      font-size: inherit;
     }
+
+    input {
+      width: 40vw;
+      padding: 0.5rem;
+    }
+
   }
 
   #book-list {
@@ -42,6 +47,20 @@
 
     th {
       background-color: lightseagreen;
+    }
+  }
+
+  #category-filter {
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+
+    #category-filter-label {
+      margin: 0 2rem;
+    }
+
+    #category-filter-menu {
+      font-size: inherit;
     }
   }
 

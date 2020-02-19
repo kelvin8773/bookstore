@@ -64,6 +64,7 @@ class BookForm extends React.Component {
             id="create-book-button"
             type="submit"
             onClick={this.handleSubmit}
+            className="button3"
           >
             Add Book
           </button>

@@ -31,6 +31,16 @@ const initialState = {
       title: 'The Histories',
       category: 'History',
     },
+    {
+      id: makeID(),
+      title: 'Blue Mars',
+      category: 'Sci-Fi',
+    },
+    {
+      id: makeID(),
+      title: 'Winning',
+      category: 'Action',
+    },
 
   ],
 };
