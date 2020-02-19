@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions';
-import { makeID } from '../helpers/index';
+import makeID from '../helpers/index';
 
 const CATEGORIES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
@@ -11,15 +11,15 @@ class BookForm extends React.Component {
     super(props);
     this.state = {
       title: '',
-      category: ''
-    }
+      category: '',
+    };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e) {
     const { target: { name, value } } = e;
-    this.setState({ [name]: value })
+    this.setState({ [name]: value });
   }
 
   handleSubmit(e) {
@@ -30,8 +30,8 @@ class BookForm extends React.Component {
       createBook(book);
       this.setState({
         title: '',
-        category: ''
-      })
+        category: '',
+      });
     }
   }
 
@@ -44,13 +44,15 @@ class BookForm extends React.Component {
             name="title"
             type="text"
             onChange={this.handleChange}
-            placeholder="Book Title" />
+            placeholder="Book Title"
+          />
         </span>
         <span>
           <select
             id="create-book-category"
-            name='category'
-            onChange={this.handleChange}>
+            name="category"
+            onChange={this.handleChange}
+          >
             <option default value="action">Category</option>
             {CATEGORIES.map(cat => (
               <option key={cat} value={cat}>{cat}</option>
@@ -62,7 +64,8 @@ class BookForm extends React.Component {
           <button
             id="create-book-button"
             type="submit"
-            onClick={this.handleSubmit}>
+            onClick={this.handleSubmit}
+          >
             Submit
           </button>
         </span>
@@ -80,11 +83,9 @@ const mapDispatchToProps = dispatch => ({
 });
 
 BookForm.propTypes = {
-  dispatch: PropTypes.instanceOf(Function),
+  // books: PropTypes.arrayOf(PropTypes.object).isRequired,
+  createBook: PropTypes.func.isRequired,
 };
 
-BookForm.defaultProps = {
-  dispatch: () => { },
-};
 
 export default connect(mapStateToProps, mapDispatchToProps)(BookForm);

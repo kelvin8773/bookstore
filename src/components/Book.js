@@ -8,10 +8,13 @@ const Book = ({ book, handleRemoveBook }) => (
     <td>{book.category}</td>
     <td>
       <button
+        type="submit"
         className="button3"
         onClick={() => handleRemoveBook(book)}
-        style={{ backgroundColor: 'lightsalmon' }}>
-        Remove</button>
+        style={{ backgroundColor: 'lightsalmon' }}
+      >
+        Remove
+      </button>
     </td>
   </tr>
 );
@@ -22,10 +25,8 @@ Book.propTypes = {
     title: PropTypes.string,
     category: PropTypes.string,
   }).isRequired,
+  handleRemoveBook: PropTypes.func.isRequired,
 };
 
-Book.defaultProps = {
-  book: {},
-};
 
 export default Book;

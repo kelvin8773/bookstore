@@ -21,7 +21,8 @@ const BookList = ({ books, removeBook }) => (
           <Book
             key={book.id}
             book={book}
-            handleRemoveBook={removeBook} />
+            handleRemoveBook={removeBook}
+          />
         ))
       }
     </tbody>
@@ -37,13 +38,9 @@ const mapDispatchToProps = dispatch => ({
 });
 
 BookList.propTypes = {
-  books: PropTypes.array,
-  removeBook: PropTypes.func
+  books: PropTypes.arrayOf(PropTypes.object).isRequired,
+  removeBook: PropTypes.func.isRequired,
 };
 
-BookList.defaultProps = {
-  books: [],
-  removeBook: () => { }
-};
 
 export default connect(mapStateToProps, mapDispatchToProps)(BookList);
