@@ -5,28 +5,29 @@ import { Provider } from 'react-redux';
 
 import App from './components/App';
 import rootReducer from './reducers/index';
+import makeID from './helpers/index';
 
 import './assets/stylesheets/index.scss';
 
 const initialState = {
   books: [
     {
-      id: 1,
+      id: makeID(),
       title: 'Born to Run',
       category: 'Learning',
     },
     {
-      id: 2,
+      id: makeID(),
       title: 'Steve Jobs',
       category: 'Biography',
     },
     {
-      id: 3,
+      id: makeID(),
       title: 'Einstein: His Life and Universe',
       category: 'Biography',
     },
     {
-      id: 4,
+      id: makeID(),
       title: 'The Histories',
       category: 'History',
     },

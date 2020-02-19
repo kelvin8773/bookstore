@@ -1,11 +1,9 @@
 const bookReducer = (state = [], action) => {
   switch (action.type) {
     case 'CREATE_BOOK':
-      return [...state, action.book];
+      return [...state, action.payload];
     case 'REMOVE_BOOK':
-      return [
-        ...state.slice(0, action.idx),
-        ...state.slice(action.idx + 1, state.length)];
+      return state.filter(book => book.id !== action.payload);
     default:
       return state;
   }
