@@ -7,18 +7,18 @@ const Book = ({ book, handleRemoveBook }) => (
     <td>{book.title}</td>
     <td>{book.category}</td>
     <td>
-      <a href="#"
+      <button
         className="button3"
         onClick={() => handleRemoveBook(book)}
         style={{ backgroundColor: 'lightsalmon' }}>
-        Remove</a>
+        Remove</button>
     </td>
   </tr>
 );
 
 Book.propTypes = {
   book: PropTypes.shape({
-    id: PropTypes.number,
+    id: PropTypes.string,
     title: PropTypes.string,
     category: PropTypes.string,
   }).isRequired,

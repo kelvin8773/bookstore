@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions';
+import { makeID } from '../helpers/index';
 
 const CATEGORIES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
@@ -23,14 +24,15 @@ class BookForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const { createBook, books } = this.props;
-    const book = { ...this.state, id: books.length + 1 };
-    console.log(book);
-    createBook(book);
-    this.setState({
-      title: '',
-      category: ''
-    })
+    const { createBook } = this.props;
+    const book = { ...this.state, id: makeID() };
+    if (book.title !== '' && book.category !== '') {
+      createBook(book);
+      this.setState({
+        title: '',
+        category: ''
+      })
+    }
   }
 
   render() {

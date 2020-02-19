@@ -1,7 +1,7 @@
 /* component customize */
 
 // button
-a.button3 {
+.button3 {
   display: inline-block;
   padding: 0.6rem 1.2rem;
 
@@ -9,13 +9,14 @@ a.button3 {
   box-sizing: border-box;
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
+  font-size: inherit;
   color: #FFFFFF;
   background-color: #4eb5f1;
   text-align: center;
   transition: all 0.2s;
 }
 
-a.button3:hover {
+.button3:hover {
   color: rgba(223, 217, 217, 0.884);
   box-shadow: 1px 1px 4px 0px rgba(32, 48, 50, 0.23);
   cursor: pointer;
@@ -23,7 +24,7 @@ a.button3:hover {
 }
 
 @media all and (max-width:30em) {
-  a.button3 {
+  .button3 {
     display: block;
     margin: 0.2em auto;
   }
