@@ -7,7 +7,7 @@
  * @param {String} an Optional (alphanumeric), "a" (alpha), "n" (numeric)
  * @return {String}
  */
-const randomString = (len, an) => {
+export const randomString = (len, an) => {
   const option = an && an.toLowerCase();
   let str = '';
   const min = option === 'a' ? 10 : 0;
@@ -27,6 +27,4 @@ const randomString = (len, an) => {
   return str;
 };
 
-const makeID = () => `ISBN-${randomString(10, 'n')}`;
-
-export default makeID;
+export const makeID = () => `ISBN-${randomString(10, 'n')}`;
