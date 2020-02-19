@@ -8,5 +8,5 @@ export const createBook = book => ({
 
 export const removeBook = book => ({
   type: REMOVE_BOOK,
-  payload: book,
+  payload: book.id,
 });
