@@ -18,11 +18,6 @@ const initialState = {
     },
     {
       id: makeID(),
-      title: 'Steve Jobs',
-      category: 'Biography',
-    },
-    {
-      id: makeID(),
       title: 'Einstein: His Life and Universe',
       category: 'Biography',
     },
@@ -33,15 +28,9 @@ const initialState = {
     },
     {
       id: makeID(),
-      title: 'Blue Mars',
-      category: 'Sci-Fi',
+      title: 'Steve Jobs',
+      category: 'Biography',
     },
-    {
-      id: makeID(),
-      title: 'Winning',
-      category: 'Action',
-    },
-
   ],
 };
 

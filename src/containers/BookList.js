@@ -13,17 +13,10 @@ const BookList = ({
     ? books : books.filter(book => book.category === filter);
 
   return (
-    <div>
+    <div id="book-list">
       <CategoryFilter handleChange={changeFilter} />
-      <table id="book-list">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Category</th>
-            <th>Action</th>
-          </tr>
-        </thead>
+
+      <table id="book-list-table">
         <tbody>
           {
             filterBooks.map(book => (
@@ -36,6 +29,8 @@ const BookList = ({
           }
         </tbody>
       </table>
+
+
     </div>
   );
 };

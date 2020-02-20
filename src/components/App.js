@@ -1,14 +1,18 @@
 import React from 'react';
-
 import BookList from '../containers/BookList';
 import BookForm from '../containers/BookForm';
+import Navbar from '../containers/Navbar';
+import Footer from './Footer';
 
 
 const App = () => (
-  <div id="app-content">
-    <h1 id="app-title">Bookstore CMS</h1>
-    <BookList />
-    <BookForm />
+  <div id="app-body">
+    <Navbar />
+    <div id="app-content">
+      <BookList />
+      <BookForm />
+    </div>
+    <Footer />
   </div>
 );
 

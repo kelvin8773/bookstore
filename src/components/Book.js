@@ -17,6 +17,8 @@ const Book = ({ book, handleRemoveBook }) => (
       </button>
     </td>
   </tr>
+
+
 );
 
 Book.propTypes = {

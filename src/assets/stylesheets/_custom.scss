@@ -1,67 +1,156 @@
-#app-content {
-  width: 80%;
-  margin: 5rem auto;
-  padding: 2rem;
-  -webkit-box-shadow: -2px -1px 12px -5px rgba(0, 0, 0, 0.65);
-  box-shadow: -2px -1px 12px -5px rgba(0, 0, 0, 0.65);
+$body-width-lg: 1600px;
+$body-height-lg: 1434px;
+$app-width: $body-width-lg * 0.8;
+$app-height: $body-height-lg * 0.7;
 
-  #app-title {
-    text-align: center;
+body {
+  width: $body-width-lg;
+  height: $body-height-lg;
+  background-color: $pale-grey;
+
+  #app-body {
+    width: $app-width;
+    height: $app-height;
+    border-radius: 4px;
+    box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+    background-color: $white;
+    margin: 5rem auto;
+
+    #app-navbar {
+      border-radius: inherit;
+      padding: 1.5rem 6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $all-white;
+
+      .logo-menu {
+        display: flex;
+        justify-content: flex-start;
+
+        .logo {
+          margin-right: 4rem;
+          color: $primary;
+          font-size: 1.8rem;
+          font-weight: 700;
+        }
+
+        .logo:hover {
+          cursor: pointer;
+          opacity: 50%;
+        }
+
+        .menu {
+          display: flex;
+          align-items: center;
+
+          .menu-item {
+            margin-right: 3rem;
+            opacity: 50%;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            color: $black-one;
+          }
+
+          .menu-item:hover {
+            cursor: pointer;
+            font-weight: 700;
+          }
+
+          .menu-active {
+            opacity: 100%;
+            font-weight: 600;
+          }
+
+        }
+      }
+
+      .login {
+        width: 45px;
+        height: 45px;
+        border: solid 1px $lighter-grey;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 50%;
+
+        .login-logo {
+          color: $primary;
+        }
+      }
+
+      .login:hover {
+        cursor: pointer;
+        opacity: 100%;
+      }
+
+    }
+
+    #book-list {
+      padding: 2.5rem;
+
+      #category-filter {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 0.9rem;
+
+        .filter-label {
+          margin: 0 2rem;
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+
+        .filter-menu {
+          font-size: inherit;
+          background-color: $all-white;
+          border: 1px solid $all-white;
+          width: 150px;
+          height: 25px;
+          outline: none;
+        }
+      }
+
+      #book-list-table {
+        margin: 2rem auto;
+
+        td {
+          margin-bottom: 1rem;
+          padding: 1rem 2rem;
+          text-align: left;
+          border: 1px solid black;
+        }
+
+      }
+    }
+
+    #create-book-form {
+      margin: 2rem auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        margin: 1rem;
+      }
+
+      input,
+      select,
+      button {
+        font-size: inherit;
+      }
+
+      input {
+        width: 40vw;
+        padding: 0.5rem;
+      }
+
+    }
+
+
+
+
   }
-
-  #create-book-form {
-    margin: 2rem auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    span {
-      margin: 1rem;
-    }
-
-    input,
-    select,
-    button {
-      font-size: inherit;
-    }
-
-    input {
-      width: 40vw;
-      padding: 0.5rem;
-    }
-
-  }
-
-  #book-list {
-    margin: 4rem auto;
-    border-collapse: collapse;
-    border: 1px solid black;
-
-    th,
-    td {
-      margin-bottom: 1rem;
-      padding: 1rem 2rem;
-      text-align: left;
-      border: 1px solid black;
-    }
-
-    th {
-      background-color: lightseagreen;
-    }
-  }
-
-  #category-filter {
-    margin: 2rem auto;
-    display: flex;
-    justify-content: center;
-
-    #category-filter-label {
-      margin: 0 2rem;
-    }
-
-    #category-filter-menu {
-      font-size: inherit;
-    }
-  }
-
 }
