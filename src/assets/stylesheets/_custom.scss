@@ -3,14 +3,17 @@ $body-height-lg: 1434px;
 $app-width: $body-width-lg * 0.8;
 $app-height: $body-height-lg * 0.7;
 
+$book-card-width: $app-width * 0.8;
+
+
 body {
   width: $body-width-lg;
-  height: $body-height-lg;
+  // height: $body-height-lg;
   background-color: $pale-grey;
 
   #app-body {
     width: $app-width;
-    height: $app-height;
+    // height: $app-height;
     border-radius: 4px;
     box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
     background-color: $white;
@@ -89,7 +92,7 @@ body {
     }
 
     #book-list {
-      padding: 2.5rem;
+      padding: 2.5rem 2.5rem 0 2.5rem;
 
       #category-filter {
         display: flex;
@@ -114,18 +117,25 @@ body {
       }
 
       #book-list-table {
-        padding: 2rem 5rem;
+        padding: 2rem;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: center;
 
         .book-card {
+          width: $book-card-width;
           display: flex;
           justify-content: space-between;
           border-radius: 4px;
           border: solid 1px $white-grey;
           background-color: $all-white;
           margin-bottom: 1rem;
-          padding: 1.5rem;
+          padding: 1.7rem;
 
           .book-info {
+            width: 50%;
+
             .book-category {
               font-size: 0.9rem;
               margin-bottom: 0.8rem;
@@ -168,6 +178,52 @@ body {
             }
           }
 
+          .read-progress {
+            width: 50%;
+            display: flex;
+            justify-content: flex-start;
+
+            .progress {
+              width: 30%;
+              display: flex;
+              justify-content: space-evenly;
+              align-items: center;
+              margin-right: 1.5rem;
+            }
+
+            .progress-detail {
+              display: flex;
+              flex-flow: column;
+              justify-content: space-between;
+              align-items: flex-start;
+              border-left: 1px solid $pale-grey;
+              padding-left: 1.5rem;
+
+              .current-chapter {
+                font-size: 0.8rem;
+                color: $black-one;
+                text-transform: uppercase;
+                font-weight: 300;
+                opacity: 0.5;
+              }
+
+              .chapter-name {
+                font-size: 1rem;
+                color: $black-one;
+                font-weight: 300;
+                margin-bottom: 0.7rem;
+              }
+
+              .update-progress {
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                font-weight: 100;
+                letter-spacing: 0.5px;
+                background-color: $primary;
+                color: $white;
+              }
+            }
+          }
 
         }
 
@@ -175,13 +231,25 @@ body {
     }
 
     #create-book-form {
-      margin: 2rem auto;
+      margin: 0 6rem;
+      padding: 2rem 0;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-flow: column;
+      justify-content: space-around;
+      align-items: flex-start;
+      border-top: 2px solid $white-grey;
+
+      .form-title {
+        font-size: 20px;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: -0.18px;
+        color: $grey;
+      }
 
       span {
-        margin: 1rem;
+        margin-right: 1rem;
       }
 
       input,
@@ -191,7 +259,6 @@ body {
       }
 
       input {
-        width: 40vw;
         padding: 0.5rem;
       }
 

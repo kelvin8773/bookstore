@@ -15,7 +15,6 @@ const BookList = ({
   return (
     <div id="book-list">
       <CategoryFilter handleChange={changeFilter} />
-
       <div id="book-list-table">
         {
           filterBooks.map(book => (
@@ -27,8 +26,6 @@ const BookList = ({
           ))
         }
       </div>
-
-
     </div>
   );
 };

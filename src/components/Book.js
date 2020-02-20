@@ -12,7 +12,7 @@ const Book = ({ book, handleRemoveBook }) => (
       </h6>
 
       <h6 className="action-buttons">
-        <span> Comment </span>
+        <span> Notes </span>
         |
         <span> Edit </span>
         |
@@ -23,19 +23,18 @@ const Book = ({ book, handleRemoveBook }) => (
 
     </div>
 
-    <div className="progress-circle">
-      <i className="fas fa-spinner fa-3x"></i>
-      <div className="progress-percentage">
-        80%
+    <div className="read-progress">
+      <div className="progress">
+        <div className="progress-circle" data-progress="45">
+        </div>
+      </div>
+
+      <div className="progress-detail">
+        <h5 className="current-chapter">Current Chapter</h5>
+        <h5 className="chapter-name">Chapter 3: "A Lesson Learned" </h5>
+        <button className="update-progress btn ">Update Progress</button>
       </div>
     </div>
-
-    <div className="progress-detail">
-      <div>Current Chapter</div>
-      <h3>Chapter 3: "A Lesson Learned" </h3>
-      <button >Update Progress</button>
-    </div>
-
   </div>
 
 
