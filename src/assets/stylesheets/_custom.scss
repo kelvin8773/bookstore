@@ -128,6 +128,17 @@ body {
           margin-bottom: 1rem;
           padding: 1.7rem;
 
+          .book-cover {
+            width: 10%;
+
+            img {
+              width: 70px;
+              margin: auto;
+              -webkit-box-shadow: 1px 1px 3px -1px #000000;
+              box-shadow: 1px 1px 3px -1px #000000;
+            }
+          }
+
           .book-info {
             width: 50%;
 
@@ -184,7 +195,7 @@ body {
           }
 
           .read-progress {
-            width: 50%;
+            width: 40%;
             display: flex;
             justify-content: flex-start;
 
@@ -231,7 +242,6 @@ body {
           }
 
         }
-
       }
     }
 

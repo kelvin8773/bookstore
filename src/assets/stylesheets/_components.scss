@@ -24,13 +24,13 @@ $size: 6rem;
     border-radius: 50%;
     content: attr(data-progress)'%';
     display: flex;
-    font-size: $size / 4;
+    font-size: $size / 3.8;
     justify-content: center;
     position: absolute;
-    left: $size/10;
-    right: $size/10;
-    top: $size/10;
-    bottom: $size/10;
+    left: $size/20;
+    right: $size/20;
+    top: $size/20;
+    bottom: $size/20;
     transition: transform .2s ease;
   }
 
@@ -46,7 +46,7 @@ $size: 6rem;
   &:hover,
   &:focus {
     &:before {
-      transform: scale(0.95);
+      transform: scale(0.9);
     }
   }
 }
