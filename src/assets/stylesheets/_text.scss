@@ -5,6 +5,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=Kelly+Slab|Lobster|Roboto+Slab&display=swap');
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
 /* **** Google Font family reference ****
 font-family: 'Ubuntu', sans-serif;
 font-family: 'Fira Sans', sans-serif;
@@ -13,16 +15,18 @@ font-family: 'Viga', sans-serif;
 font-family: 'Roboto Slab', serif;
 font-family: 'Lobster', cursive;
 font-family: 'Kelly Slab', cursive;
+font-family: 'Montserrat', sans-serif;
 
 */
 
 body {
-  font-family: 'Fira Code', monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
 }
 
 h1 {
-  font-family: 'Viga', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
