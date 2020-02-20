@@ -1,19 +1,14 @@
 $body-width-lg: 1600px;
-$body-height-lg: 1434px;
 $app-width: $body-width-lg * 0.8;
-$app-height: $body-height-lg * 0.7;
 
 $book-card-width: $app-width * 0.8;
-
+$form-width: $app-width * 0.84;
 
 body {
-  width: $body-width-lg;
-  // height: $body-height-lg;
   background-color: $pale-grey;
 
   #app-body {
     width: $app-width;
-    // height: $app-height;
     border-radius: 4px;
     box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
     background-color: $white;
@@ -231,7 +226,7 @@ body {
     }
 
     #create-book-form {
-      margin: 0 6rem;
+      margin: 0 6.5rem;
       padding: 2rem 0;
       display: flex;
       flex-flow: column;
@@ -248,24 +243,67 @@ body {
         color: $grey;
       }
 
-      span {
-        margin-right: 1rem;
-      }
+      form {
+        width: $form-width;
+        display: flex;
+        justify-content: space-between;
 
-      input,
-      select,
-      button {
-        font-size: inherit;
-      }
+        .create-book-title {
+          flex-grow: 6;
+          border-radius: 4px;
+          font-size: 16px;
+          letter-spacing: -0.15px;
+          padding: 0.8rem;
+          border: solid 1px $white-grey;
+          background-color: $all-white;
+          color: $light-grey;
+          margin-right: 3rem;
+        }
 
-      input {
-        padding: 0.5rem;
+        .create-book-category {
+          flex-grow: 2;
+          border-radius: 4px;
+          font-size: 16px;
+          background-color: $all-white;
+          border: solid 1px $white-grey;
+          outline: none;
+          margin-right: 3rem;
+        }
+
+        .create-button {
+          flex-grow: 0;
+          font-size: 13px;
+          font-weight: 400;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          color: $white;
+        }
+
+      }
+    }
+
+    #app-footer {
+      padding: 3rem 0;
+      text-align: center;
+
+      .foot-note {
+        font-size: 0.8rem;
+        font-style: italic;
+        font-weight: 200;
+        color: $lighter-grey;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+          font-weight: 400;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+
       }
 
     }
-
-
-
-
   }
 }
