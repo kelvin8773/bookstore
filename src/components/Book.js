@@ -25,7 +25,7 @@ const Book = ({ book, handleRemoveBook }) => (
 
     <div className="read-progress">
       <div className="progress">
-        <div className="progress-circle" data-progress="45" />
+        <div className="progress-circle" data-progress={book.progress} />
       </div>
 
       <div className="progress-detail">
@@ -44,6 +44,9 @@ Book.propTypes = {
     id: PropTypes.string,
     title: PropTypes.string,
     category: PropTypes.string,
+    author: PropTypes.string,
+    cover: PropTypes.string,
+    progress: PropTypes.string,
   }).isRequired,
   handleRemoveBook: PropTypes.func.isRequired,
 };

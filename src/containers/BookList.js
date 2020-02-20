@@ -30,7 +30,6 @@ const BookList = ({
   );
 };
 
-
 const mapStateToProps = state => ({
   books: state.books,
   filter: state.filter,
