@@ -38,14 +38,16 @@ class BookForm extends React.Component {
     return (
       <div id="create-book-form">
         <div className="form-title">add new book</div>
-        <form>
+        <form action="">
           <input
+            name="title"
             className="create-book-title"
             type="text"
             onChange={this.handleChange}
             placeholder="Book Title"
           />
           <select
+            name="category"
             className="create-book-category"
             onChange={this.handleChange}
           >

@@ -10,9 +10,9 @@ const Navbar = () => (
       </div>
     </div>
     <div className="login">
-      <i className="fas fa-user login-logo"></i>
+      <i className="fas fa-user login-logo" />
     </div>
   </div>
-)
+);
 
 export default Navbar;

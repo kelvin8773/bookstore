@@ -159,16 +159,25 @@ body {
 
             .action-buttons {
               width: 220px;
-              font-size: 0.8rem;
-              font-weight: 300;
-              color: $dark-blue;
               display: flex;
               justify-content: space-between;
               align-items: center;
+              color: $white-grey;
 
-              span:hover {
-                cursor: pointer;
-                color: $primary;
+
+              button {
+                outline: none;
+                border: none;
+                padding: 0;
+                font-size: 0.8rem;
+                font-family: inherit;
+                font-weight: 100;
+                color: $dark-blue;
+
+                &:hover {
+                  cursor: pointer;
+                  color: $primary;
+                }
               }
             }
           }

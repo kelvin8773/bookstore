@@ -12,27 +12,26 @@ const Book = ({ book, handleRemoveBook }) => (
       </h6>
 
       <h6 className="action-buttons">
-        <span> Notes </span>
+        <button type="button"> Notes </button>
         |
-        <span> Edit </span>
+        <button type="button"> Edit </button>
         |
-        <span onClick={() => handleRemoveBook(book)}>
+        <button type="button" onClick={() => handleRemoveBook(book)}>
           Remove
-        </span>
+        </button>
       </h6>
 
     </div>
 
     <div className="read-progress">
       <div className="progress">
-        <div className="progress-circle" data-progress="45">
-        </div>
+        <div className="progress-circle" data-progress="45" />
       </div>
 
       <div className="progress-detail">
         <h5 className="current-chapter">Current Chapter</h5>
-        <h5 className="chapter-name">Chapter 3: "A Lesson Learned" </h5>
-        <button className="update-progress btn ">Update Progress</button>
+        <h5 className="chapter-name">Chapter 3: A Lesson Learned</h5>
+        <button type="button" className="update-progress btn ">Update Progress</button>
       </div>
     </div>
   </div>
