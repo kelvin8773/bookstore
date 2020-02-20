@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 
 import App from './components/App';
 import rootReducer from './reducers/index';
-import makeID from './helpers/index';
+import { makeID } from './helpers/index';
 
 import './assets/stylesheets/index.scss';
 
@@ -30,6 +30,16 @@ const initialState = {
       id: makeID(),
       title: 'The Histories',
       category: 'History',
+    },
+    {
+      id: makeID(),
+      title: 'Blue Mars',
+      category: 'Sci-Fi',
+    },
+    {
+      id: makeID(),
+      title: 'Winning',
+      category: 'Action',
     },
 
   ],
