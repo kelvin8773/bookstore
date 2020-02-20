@@ -17,7 +17,10 @@ const initialState = {
       category: 'Learning',
       author: 'Christopher McDougall',
       cover: './assets/images/born_to_run.jpg',
-      progress: 54,
+      progress: {
+        percent: 54,
+        chapter: "Chapter 8"
+      },
     },
     {
       id: makeID(),
@@ -25,7 +28,10 @@ const initialState = {
       category: 'Biography',
       author: 'Isaacson Walter',
       cover: './assets/images/einstein.jpg',
-      progress: 12,
+      progress: {
+        percent: 12,
+        chapter: "Chapter Two: Childhood 1879 ~ 1896"
+      },
     },
     {
       id: makeID(),
@@ -33,7 +39,11 @@ const initialState = {
       category: 'Biography',
       author: 'Isaacson Walter',
       cover: './assets/images/steve_jobs.jpg',
-      progress: 83,
+      progress: {
+        percent: 77,
+        chapter: "Chapter 29 ~ Apple Stores, Genius Bars and Siena Sandstone"
+      },
+
     },
   ],
 };

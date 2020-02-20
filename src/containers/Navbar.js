@@ -3,7 +3,7 @@ import React from 'react';
 const Navbar = () => (
   <div id="app-navbar">
     <div className="logo-menu">
-      <h1 className="logo">Bookstore CMS</h1>
+      <h1 className="logo">Pioneer Bookstore</h1>
       <div className="menu">
         <div className="menu-item menu-active">Books</div>
         <div className="menu-item">Categories</div>

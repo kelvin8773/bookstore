@@ -72,7 +72,6 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        opacity: 50%;
 
         .login-logo {
           color: $primary;
@@ -81,7 +80,7 @@ body {
 
       .login:hover {
         cursor: pointer;
-        opacity: 100%;
+        opacity: 50%;
       }
 
     }
@@ -227,7 +226,8 @@ body {
                 font-size: 1rem;
                 color: $black-one;
                 font-weight: 300;
-                margin-bottom: 0.7rem;
+                margin-bottom: 0.4rem;
+                line-height: 1.4;
               }
 
               .update-progress {
