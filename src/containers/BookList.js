@@ -13,33 +13,22 @@ const BookList = ({
     ? books : books.filter(book => book.category === filter);
 
   return (
-    <div>
+    <div id="book-list">
       <CategoryFilter handleChange={changeFilter} />
-      <table id="book-list">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Category</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            filterBooks.map(book => (
-              <Book
-                key={book.id}
-                book={book}
-                handleRemoveBook={removeBook}
-              />
-            ))
-          }
-        </tbody>
-      </table>
+      <div id="book-list-table">
+        {
+          filterBooks.map(book => (
+            <Book
+              key={book.id}
+              book={book}
+              handleRemoveBook={removeBook}
+            />
+          ))
+        }
+      </div>
     </div>
   );
 };
-
 
 const mapStateToProps = state => ({
   books: state.books,

@@ -1,31 +1,96 @@
 /* component customize */
 
-// button
-.button3 {
+//
+// Progress Circle
+// https://codepen.io/felipefialho/pen/vGMJBN?editors=0110
+// ==================================================
+
+$theme-color: #0083ff;
+$back-color: #dddddd;
+$size: 6rem;
+
+.progress-circle {
+  width: $size;
+  height: $size;
+  background-color: $back-color;
+  border-radius: 50%;
   display: inline-block;
-  padding: 0.6rem 1.2rem;
-
-  border-radius: 2em;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-family: 'Roboto', sans-serif;
-  font-size: inherit;
-  color: #FFFFFF;
-  background-color: #4eb5f1;
+  position: relative;
   text-align: center;
-  transition: all 0.2s;
-}
 
-.button3:hover {
-  color: rgba(223, 217, 217, 0.884);
-  box-shadow: 1px 1px 4px 0px rgba(32, 48, 50, 0.23);
-  cursor: pointer;
-  background-color: #4095c6;
-}
-
-@media all and (max-width:30em) {
-  .button3 {
-    display: block;
-    margin: 0.2em auto;
+  &:before {
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    content: attr(data-progress)'%';
+    display: flex;
+    font-size: $size / 3.8;
+    justify-content: center;
+    position: absolute;
+    left: $size/20;
+    right: $size/20;
+    top: $size/20;
+    bottom: $size/20;
+    transition: transform .2s ease;
   }
+
+  &:after {
+    background-color: $theme-color;
+    border-radius: 50%;
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover,
+  &:focus {
+    &:before {
+      transform: scale(0.9);
+    }
+  }
+}
+
+/**
+* $step is set to 5 by default, meaning you can only use percentage classes in increments of five (e.g. 25, 30, 45, 50, and so on). This helps to reduce the size of the final CSS file. If you need a number that doesn't end in 0 or 5, you can change the text percentage while rounding the class up/down to the nearest 5.
+*/
+
+$step: 1;
+$loops: round(100 / $step);
+$increment: 360 / $loops;
+$half: round($loops / 2);
+
+@for $i from 0 through $loops {
+  .progress-circle[data-progress="#{$i * $step}"] {
+    &:after {
+      @if $i < $half {
+        $next-deg: 90deg + $increment * $i;
+        background-image:
+          linear-gradient(90deg, $back-color 50%, transparent 50%, transparent),
+          linear-gradient($next-deg, $theme-color 50%, $back-color 50%, $back-color);
+      }
+
+      @else {
+        $next-deg: -90deg + $increment * ($i - $half);
+        background-image:
+          linear-gradient($next-deg, $theme-color 50%, transparent 50%, transparent),
+          linear-gradient(270deg, $theme-color 50%, $back-color 50%, $back-color);
+      }
+    }
+  }
+}
+
+//Button
+
+.btn {
+  padding: 0.65rem 2.3rem;
+  border-radius: 5px;
+  background-color: $primary;
+  color: $back-color;
+  text-align: center;
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 40%;
 }

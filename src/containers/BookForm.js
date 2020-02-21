@@ -36,20 +36,19 @@ class BookForm extends React.Component {
 
   render() {
     return (
-      <form id="create-book-form" action="">
-        <span>
+      <div id="create-book-form">
+        <div className="form-title">add new book</div>
+        <form action="">
           <input
-            id="create-book-title"
             name="title"
+            className="create-book-title"
             type="text"
             onChange={this.handleChange}
             placeholder="Book Title"
           />
-        </span>
-        <span>
           <select
-            id="create-book-category"
             name="category"
+            className="create-book-category"
             onChange={this.handleChange}
           >
             <option default value="action">Category</option>
@@ -57,19 +56,17 @@ class BookForm extends React.Component {
               <option key={cat} value={cat}>{cat}</option>
             ))}
           </select>
-        </span>
 
-        <span>
           <button
-            id="create-book-button"
+            className="create-button btn"
             type="submit"
             onClick={this.handleSubmit}
-            className="button3"
           >
             Add Book
           </button>
-        </span>
-      </form>
+        </form>
+
+      </div>
     );
   }
 }

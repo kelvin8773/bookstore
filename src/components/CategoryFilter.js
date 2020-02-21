@@ -17,9 +17,9 @@ class CategoryFilter extends React.Component {
     const CATEGORY_FILTER = ['All', ...CATEGORIES];
     return (
       <div id="category-filter">
-        <span id="category-filter-label">Category</span>
+        <span className="filter-label">Category</span>
         <select
-          id="category-filter-menu"
+          className="filter-menu"
           onChange={this.handleChange}
         >
           {
