@@ -12,7 +12,9 @@
   </a>
 </p>
 
-> React-redux Example App
+> A React & Redux Boilerplate Project
+
+[![Bookstore-sceenshot](./docs/bookstore-showcase.png)](https://bookstore.kelvinliang.cn)
 
 ### ✨ [Demo](https://pioneer-bookstore.herokuapp.com/)
 
