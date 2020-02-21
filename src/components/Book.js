@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 const Book = ({ book, handleRemoveBook }) => {
   const coverPlaceholder = './assets/images/placeholder.png';
   const authorPlaceholder = 'Frank Herbert';
-  const percentage = book.progress.percent ? book.progress.percent : 0;
+  const percentage = book.progress ? book.progress.percent : 0;
+  const chapter = book.progress ? book.progress.chapter : 'Chapter 3 "A Lesson Learned"'
 
   return (
     <div className="book-card">
@@ -39,8 +40,8 @@ const Book = ({ book, handleRemoveBook }) => {
 
         <div className="progress-detail">
           <h5 className="current-chapter">Current Chapter</h5>
-          <h5 className="chapter-name">{book.progress.chapter}</h5>
-          <button type="button" className="update-progress btn ">Update Progress</button>
+          <h5 className="chapter-name">{chapter}</h5>
+          <button type="button" className="update-progress btn">Update Progress</button>
         </div>
       </div>
     </div>
