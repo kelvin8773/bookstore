@@ -10,15 +10,22 @@
   <a href="https://twitter.com/kelvin9877" target="_blank">
     <img alt="Twitter: kelvin9877" src="https://img.shields.io/twitter/follow/kelvin9877.svg?style=social" />
   </a>
+  <a href="https://app.netlify.com/sites/pioneer-bookstore/deploys" target="_blank">
+    <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/3d12bf85-5d89-4689-a0bb-434136e88aa1/deploy-status" />
+  </a>
+  
 </p>
 
-> A React & Redux Boilerplate Project
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3d12bf85-5d89-4689-a0bb-434136e88aa1/deploy-status)](https://app.netlify.com/sites/pioneer-bookstore/deploys)
+> A React & Redux Boilerplate Project.
 
 [![Bookstore-sceenshot](./docs/bookstore-showcase.png)](https://bookstore.kelvinliang.cn)
 
-### ✨ [Demo](https://bookstore.kelvinliang.cn/)
+## Tech Stack
+* ES6
+* React & redux
+* SCSS
+
+### ✨ [Demo Link](https://bookstore.kelvinliang.cn/)
 
 ## 🎬 Install
 
