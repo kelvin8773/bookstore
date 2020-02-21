@@ -14,9 +14,11 @@
 
 > A React & Redux Boilerplate Project
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3d12bf85-5d89-4689-a0bb-434136e88aa1/deploy-status)](https://app.netlify.com/sites/pioneer-bookstore/deploys)
+
 [![Bookstore-sceenshot](./docs/bookstore-showcase.png)](https://bookstore.kelvinliang.cn)
 
-### ✨ [Demo](https://pioneer-bookstore.herokuapp.com/)
+### ✨ [Demo](https://bookstore.kelvinliang.cn/)
 
 ## 🎬 Install
 
