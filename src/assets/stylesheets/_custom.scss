@@ -35,7 +35,7 @@ body {
 
         .logo:hover {
           cursor: pointer;
-          opacity: 50%;
+          color: $dark-blue;
         }
 
         .menu {
@@ -44,21 +44,20 @@ body {
 
           .menu-item {
             margin-right: 3rem;
-            opacity: 50%;
             text-transform: uppercase;
             font-size: 0.9rem;
             letter-spacing: 1.5px;
-            color: $black-one;
-          }
+            color: $grey;
 
-          .menu-item:hover {
-            cursor: pointer;
-            font-weight: 700;
+            &:hover {
+              cursor: pointer;
+              font-weight: 700;
+            }
           }
 
           .menu-active {
-            opacity: 100%;
             font-weight: 600;
+            color: $black-one;
           }
 
         }
@@ -75,14 +74,13 @@ body {
 
         .login-logo {
           color: $primary;
+
+          &:hover {
+            cursor: pointer;
+            color: $dark-blue;
+          }
         }
       }
-
-      .login:hover {
-        cursor: pointer;
-        opacity: 50%;
-      }
-
     }
 
     #book-list {
@@ -237,6 +235,10 @@ body {
                 letter-spacing: 0.5px;
                 background-color: $primary;
                 color: $white;
+
+                &:hover {
+                  background-color: $dark-blue;
+                }
               }
             }
           }
@@ -306,22 +308,34 @@ body {
       padding: 3rem 0;
       text-align: center;
 
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-weight: 200;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+
       .foot-note {
         font-size: 0.8rem;
         font-style: italic;
-        font-weight: 200;
-        color: $lighter-grey;
+        font-weight: 100;
+        color: $grey;
+        margin-bottom: 1rem;
+      }
+
+      .foot-links {
+        display: flex;
+        justify-content: center;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: $white-grey;
 
         a {
-          text-decoration: none;
-          color: inherit;
-          font-weight: 400;
-
-          &:hover {
-            color: $primary;
-          }
+          margin-right: 1rem;
         }
-
       }
 
     }
