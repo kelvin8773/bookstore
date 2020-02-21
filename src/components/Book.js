@@ -5,7 +5,7 @@ const Book = ({ book, handleRemoveBook }) => {
   const coverPlaceholder = './assets/images/placeholder.png';
   const authorPlaceholder = 'Frank Herbert';
   const percentage = book.progress ? book.progress.percent : 0;
-  const chapter = book.progress ? book.progress.chapter : 'Chapter 3 "A Lesson Learned"'
+  const chapter = book.progress ? book.progress.chapter : 'Chapter 3 "A Lesson Learned"';
 
   return (
     <div className="book-card">
