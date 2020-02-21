@@ -19,7 +19,7 @@ const initialState = {
       cover: './assets/images/born_to_run.jpg',
       progress: {
         percent: 54,
-        chapter: "Chapter 8"
+        chapter: "Chapter 3 - 'A Lesson Learned'"
       },
     },
     {
@@ -30,7 +30,7 @@ const initialState = {
       cover: './assets/images/einstein.jpg',
       progress: {
         percent: 12,
-        chapter: "Chapter Two: Childhood 1879 ~ 1896"
+        chapter: "Chapter Two: Childhood"
       },
     },
     {
@@ -41,7 +41,7 @@ const initialState = {
       cover: './assets/images/steve_jobs.jpg',
       progress: {
         percent: 77,
-        chapter: "Chapter 29 ~ Apple Stores, Genius Bars and Siena Sandstone"
+        chapter: "Chapter 29 ~ Apple Stores"
       },
 
     },
