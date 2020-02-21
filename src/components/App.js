@@ -1,20 +1,20 @@
 import React from 'react';
+import BookList from '../containers/BookList';
+import BookForm from '../containers/BookForm';
+import Navbar from '../containers/Navbar';
+import Footer from './Footer';
 
-class App extends React.Component {
-  constructor(pros) {
-    super(pros);
-    this.state = {
 
-    }
-  }
+const App = () => (
+  <div id="app-body">
+    <Navbar />
+    <div id="app-content">
+      <BookList />
+      <BookForm />
+    </div>
+    <Footer />
+  </div>
+);
 
-  render() {
-    return (
-      <div>
-        <h1 class="text-center">Book Store</h1>
-      </div>
-    );
-  }
-}
 
 export default App;
