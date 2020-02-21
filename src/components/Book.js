@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Book = ({ book, handleRemoveBook }) => {
-  const coverPlaceholder = "./assets/images/placeholder.png";
-  const authorPlaceholder = "Frank Herbert";
+  const coverPlaceholder = './assets/images/placeholder.png';
+  const authorPlaceholder = 'Frank Herbert';
   const percentage = book.progress.percent ? book.progress.percent : 0;
 
   return (
@@ -45,7 +45,7 @@ const Book = ({ book, handleRemoveBook }) => {
       </div>
     </div>
   );
-}
+};
 
 
 Book.propTypes = {
