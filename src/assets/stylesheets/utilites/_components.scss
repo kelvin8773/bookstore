@@ -80,16 +80,54 @@ $half: round($loops / 2);
   }
 }
 
+//============================================================
+
 //Button
 
 .btn {
   padding: 0.65rem 2.3rem;
   border-radius: 5px;
-  background-color: $primary;
+  background-color: $theme-color;
   color: $back-color;
   text-align: center;
 }
 
 .btn:hover {
   cursor: pointer;
+}
+
+// ================================================================
+//blink Text
+
+.text-blink {
+  -webkit-animation: blink 1s step-end infinite;
+  animation: blink 1s step-end infinite;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1.0;
+  }
+
+  50% {
+    opacity: 0.0;
+  }
+
+  100% {
+    opacity: 1.0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1.0;
+  }
+
+  50% {
+    opacity: 0.0;
+  }
+
+  100% {
+    opacity: 1.0;
+  }
 }
