@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { CATEGORIES } from '../helpers/index';
+import { CATEGORIES } from '../helpers/constant';
 
 class CategoryFilter extends React.Component {
   constructor(props) {

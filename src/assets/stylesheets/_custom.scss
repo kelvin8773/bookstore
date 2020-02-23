@@ -1,8 +1,8 @@
-$body-width-lg: 1600px;
-$app-width: $body-width-lg * 0.8;
+$body-width: 1580px;
+$app-width: $body-width * 0.8;
+
 $book-card-width: $app-width * 0.8;
 $form-width: $app-width * 0.84;
-
 
 body {
   background-color: $pale-grey;
@@ -300,6 +300,11 @@ body {
           text-transform: uppercase;
           letter-spacing: 0.5px;
           color: $white;
+          background-color: $primary;
+
+          &:hover {
+            background-color: $dark-blue;
+          }
         }
 
       }

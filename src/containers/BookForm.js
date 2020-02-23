@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions';
-import { makeID, CATEGORIES } from '../helpers/index';
-
+import { makeID } from '../helpers/index';
+import { CATEGORIES } from '../helpers/constant';
 
 class BookForm extends React.Component {
   constructor(props) {
