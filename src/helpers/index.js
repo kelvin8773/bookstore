@@ -28,5 +28,3 @@ export const randomString = (len, an) => {
 };
 
 export const makeID = () => `ISBN-${randomString(10, 'n')}`;
-
-
