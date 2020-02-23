@@ -24,13 +24,11 @@ const Book = ({ book, handleRemoveBook }) => {
         </h6>
 
         <h6 className="action-buttons">
-          <button type="button"> Notes </button>
+          <a href="#popup-book-comment"> Comment </a>
           |
-          <button type="button"> Edit </button>
+          <a href="#popup-edit-book"> Edit </a>
           |
-          <button type="button" onClick={() => handleRemoveBook(book)}>
-            Remove
-          </button>
+          <a href="#popup-remove-book"> Remove </a>
         </h6>
       </div>
       <div className="read-progress">
