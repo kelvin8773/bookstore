@@ -1,11 +1,9 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { createBook } from '../actions';
-import { makeID } from '../helpers/index';
-import { CATEGORIES } from '../helpers/constant';
+import { makeID } from '../../helpers/index';
+import { CATEGORIES } from '../../helpers/constant';
 
-class BookForm extends React.Component {
+class AddBookForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -69,20 +67,12 @@ class BookForm extends React.Component {
       </div>
     );
   }
+
 }
 
-const mapStateToProps = state => ({
-  books: state.books,
-});
-
-const mapDispatchToProps = dispatch => ({
-  createBook: book => dispatch(createBook(book)),
-});
-
-BookForm.propTypes = {
-  // books: PropTypes.arrayOf(PropTypes.object).isRequired,
+AddBookForm.propTypes = {
   createBook: PropTypes.func.isRequired,
 };
 
+export default AddBookForm;
 
-export default connect(mapStateToProps, mapDispatchToProps)(BookForm);

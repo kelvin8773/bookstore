@@ -1,20 +1,14 @@
 import React from 'react';
-import BookList from '../containers/BookList';
-import BookForm from '../containers/BookForm';
-import Navbar from '../containers/Navbar';
-import Footer from './Footer';
-
+import Navbar from './top/Navbar';
+import Content from '../containers/Content';
+import Bottom from '../containers/Bottom';
 
 const App = () => (
   <div id="app-body">
     <Navbar />
-    <div id="app-content">
-      <BookList />
-      <BookForm />
-    </div>
-    <Footer />
+    <Content />
+    <Bottom />
   </div>
 );
-
 
 export default App;
