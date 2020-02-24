@@ -18,9 +18,7 @@ const Books = ({ books, removeBook }) => (
 
 Books.propTypes = {
   books: PropTypes.arrayOf(PropTypes.object).isRequired,
-  filter: PropTypes.string.isRequired,
   removeBook: PropTypes.func.isRequired,
-  changeFilter: PropTypes.func.isRequired,
 };
 
 export default Books;

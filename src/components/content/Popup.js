@@ -40,7 +40,12 @@ const Popups = ({ books, removeBook }) => {
             <form className="book-update-form">
               <div className="update-item">
                 <label htmlFor="title">Title:</label>
-                <input name="title" className="update-title" type="text" value={book.title} />
+                <input name="title"
+                  className="update-title"
+                  type="text"
+                  value={book.title}
+                  onChange={e => console.log(e.target.value)}
+                />
               </div>
               <div className="update-item">
                 <label htmlFor="category">Category:</label>
@@ -54,7 +59,12 @@ const Popups = ({ books, removeBook }) => {
 
               <div className="update-item">
                 <label htmlFor="author">Author:</label>
-                <input name="author" className="update-author" type="text" value={book.author} />
+                <input name="author"
+                  className="update-author"
+                  type="text"
+                  value={book.author}
+                  onChange={e => console.log(e.target.value)}
+                />
               </div>
 
               <button className="btn">Save</button>
