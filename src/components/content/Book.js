@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = ({ book, handleRemoveBook }) => {
+const Book = ({ book, selectBook }) => {
   const coverPlaceholder = './assets/images/placeholder.png';
   const authorPlaceholder = 'Frank Herbert';
   const percentage = book.progress ? book.progress.percent : 0;
@@ -24,11 +24,11 @@ const Book = ({ book, handleRemoveBook }) => {
         </h6>
 
         <h6 className="action-buttons">
-          <a href="#popup-book-comment"> Comment </a>
+          <a href="#popup-book-comment" onClick={() => selectBook(book)}> Comment </a>
           |
-          <a href="#popup-edit-book"> Edit </a>
+          <a href="#popup-edit-book" onClick={() => selectBook(book)}> Edit </a>
           |
-          <a href="#popup-remove-book"> Remove </a>
+          <a href="#popup-remove-book" onClick={() => selectBook(book)}> Remove </a>
         </h6>
       </div>
       <div className="read-progress">
@@ -59,7 +59,6 @@ Book.propTypes = {
       chapter: PropTypes.string,
     }),
   }).isRequired,
-  handleRemoveBook: PropTypes.func.isRequired,
 };
 
 

@@ -9,7 +9,7 @@ class AddBookForm extends React.Component {
     this.state = {
       title: '',
       category: '',
-    };
+    }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
